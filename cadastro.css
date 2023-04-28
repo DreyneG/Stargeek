@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: rgb(28, 28, 28);
 }
 ::-webkit-scrollbar{
     width: 5px;
@@ -16,29 +20,13 @@
 
     
 }
-a{
-    color: white;
-    text-decoration: none;
-}
-
-body{
-    background-color: rgb(62, 62, 62);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-}
-/* .conteiner{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 20px auto auto;
-    grid-template-areas: 
-    "h h h"
-    "c c c"
-    "f f f";
-    
-} */
 header{
     grid-area: h;
     
+}
+.bebecalho a{
+    color: white;
+    text-decoration: none;
 }
 .conteudo{
     display: flex;
@@ -179,7 +167,7 @@ header{
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    padding-left: 690px;
+    padding-left: 701px;
     margin-right: 40px;
 }
 .esquerda > ul > li{
@@ -195,163 +183,135 @@ header{
     width: 100%;
     background-color: aqua;
 }
-.bar{
-    width: 70vw;
-    height: 5px;
-    background-color: aqua;
-    margin-top: 100px;
-    /* filter: blur(5px); */
-    margin-bottom: 100px;
-    /* align-self: auto; */
-    /* margin-left: 170px;
-    margin-top: 60px; */
-}
-/* .bar::before, .bar::after{
-    content: '';
-    position: absolute;
-    /* width: calc(100% ); */
-    /* height: calc(100% ); */
-    /* z-index: -1;
-    background: linear-gradient(45deg, #6a5acd, #00008b, #0000cd, rgb(30, 144, 255), rgb(0, 191, 255), rgb(135, 206, 235));
-} */
-/* .bar::after{ 
-    filter: blur(20px);
-} */
-.Im{
-   
-    /* margin: 30px 30px; */
-    margin-top: 30px;
+
+section{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    width: 100%;
 }
-.product{
+.form-group{
     position: relative;
-    width:  25%;
-    height: 340px;
-    background-color: rgb(37, 37, 44);
-    margin: 30px;
-    border-radius: 3px;
-    border: 2px solid;
+    width: 540px;
+    height: 610px;
+    background: transparent;
     display: flex;
-    justify-content: end;
-    flex-direction: column;
-
-    
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(53, 191, 255, 0.5);
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-top: 60px;
 }
-.inf{
+h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.forme{
+    position: relative;
+    margin: 30px 0;
+    width: 450px;
+    border-bottom: 2px solid white;
+}
+.forme label{
     position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+
+}
+.forme input{
     width: 100%;
-    height: 100px;
-    background-color: blueviolet;
-    visibility: collapse;
-    
 }
-.tx{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: wheat;
-    text-decoration-line: underline;
-    font-size: 2.2rem;
+.forme input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #fff;
 }
-
-
-.inf:hover{
-    visibility: visible;
-}
-.barconfig{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-} 
-/*.product::before, .product::after{
-    content: '';
+.forme i{
     position: absolute;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    z-index: -1;
-    background: linear-gradient(45deg, #6a5acd, #00008b, #0000cd, rgb(30, 144, 255), rgb(0, 191, 255), rgb(135, 206, 235));
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;  
+}
 
-
-}*/
-
-.product::after{
-    filter: blur(8px);
-    cursor: pointer;
+.forget label input{
+    margin-right: 3px;
     
 }
-.product img{
-    width: 99.5%;
-    height: 99.5%;
+.forget label a{
+    color: #fff;
+    text-decoration: none;
 }
-footer{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-    
-
+.forget label a:hover{
+    text-decoration: underline;
 }
-
-footer > .mainf > ul{
-    padding-left: 30px;
-    list-style: none;
-    padding-top: 50px;
-    grid-area: t;
-    padding-bottom: 30px;
-
-}
-footer > .mainf ul > li{
-    font-size: 1.3rem;
-    padding: 10px;
-
-
-}
-footer > .mainf ul > li:hover{
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
     cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
     transition: 300ms;
-    color: rgb(202, 202, 202);
 }
-.iccon{
-    grid-area: i;
-    display: flex;
-    justify-content: center;
-    padding-top: 12.5%;
+button:hover{
+    background: rgb(73, 224, 235);
+    color:white
 }
-#icon{
-    font-size: 4rem;
-    padding-right: 20px;
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
 }
-#fcon{
-    font-size: 4rem;
-    padding-right: 20px;
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
 }
-#tcon{
-    font-size: 4rem;
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
 }
-.crbar{
-    width: 100%;
-    height: auto;
-    background-color: rgb(53, 53, 53);
-    color: white;
-    display: flex;
-    justify-content: center;
-    font-size: 1.3rem;
-    
+.register p a:hover{
+    text-decoration: underline;
 }
-.mainf{
-    color: white;
-    background-color: black;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "t i"
-    "t g";
+
+input{
+    accent-color: rgb(58, 187, 238);
 }
-@media screen and (max-width: 558px) {
+.forget a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600
+}
+.forget a:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px){
     .cabecalho{
         width: 100%;
         
@@ -514,87 +474,6 @@ footer > .mainf ul > li:hover{
         /* margin-left: 170px;
         margin-top: 60px; */
     }
-    /* .bar::before, .bar::after{
-        content: '';
-        position: absolute;
-        /* width: calc(100% ); */
-        /* height: calc(100% ); */
-        /* z-index: -1;
-        background: linear-gradient(45deg, #6a5acd, #00008b, #0000cd, rgb(30, 144, 255), rgb(0, 191, 255), rgb(135, 206, 235));
-    } */
-    /* .bar::after{ 
-        filter: blur(20px);
-    } */
-    .Im{
-       
-        /* margin: 30px 30px; */
-        margin-top: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .product{
-        position: relative;
-        width:  150;
-        height: 130px;
-        background-color: rgb(37, 37, 44);
-        margin: 10px;
-        border-radius: 3px;
-        border: 2px solid;
-        display: flex;
-        justify-content: end;
-        flex-direction: column;
-    
-        
-    }
-    .inf{
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        background-color: blueviolet;
-        visibility: collapse;
-        
-    }
-    .tx{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: wheat;
-        text-decoration-line: underline;
-        font-size: 1rem;
-    }
-    
-    
-    .inf:hover{
-        visibility: visible;
-    }
-    .barconfig{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    } 
-    /*.product::before, .product::after{
-        content: '';
-        position: absolute;
-        width: calc(100% + 10px);
-        height: calc(100% + 10px);
-        z-index: -1;
-        background: linear-gradient(45deg, #6a5acd, #00008b, #0000cd, rgb(30, 144, 255), rgb(0, 191, 255), rgb(135, 206, 235));
-    
-    
-    }*/
-    
-    .product::after{
-        filter: blur(8px);
-        cursor: pointer;
-        
-    }
-    .product img{
-        width: 99.5%;
-        height: 99.5%;
-    }
     footer{
       display: flex;
       justify-content: center;
@@ -659,5 +538,130 @@ footer > .mainf ul > li:hover{
         grid-template-areas: 
         "t i"
         "t g";
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100%;
+    }
+    .form-group{
+        position: relative;
+        width: 400px;
+        height: 700px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgba(53, 191, 255, 0.5);
+        border-radius: 30px;
+        margin-left: 0px;
+    }
+    h2{
+        font-size: 3em;
+        color: white;
+        text-align: center;
+    }
+    .forme{
+        position: relative;
+        margin: 30px 0;
+        width: 370px;
+        border-bottom: 2px solid white;
+    }
+    .forme label{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 1.3rem;
+        pointer-events: none;
+    
+    }
+    .forme input{
+        width: 100%;
+    }
+    .forme input {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1.3rem;
+        padding:0 35px 0 5px;
+        color: #fff;
+    }
+    .forme i{
+        position: absolute;
+        right: 8px;
+        color: #fff;
+        font-size: 1.3em;
+        top: 20px;
+    }
+    .forget{
+        margin: -15px 0 15px ;
+        font-size: 1.3em;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;  
+    }
+    
+    .forget label input{
+        margin-right: 3px;
+        
+    }
+    .forget label a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .forget label a:hover{
+        text-decoration: underline;
+    }
+    button{
+        width: 100%;
+        height: 50px;
+        border-radius: 40px;
+        background: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 2em;
+        font-weight: 600;
+        transition: 300ms;
+    }
+    button:hover{
+        background: rgb(73, 224, 235);
+        color:white
+    }
+    input:focus ~ label,
+    input:valid ~ label{
+    top: -5px;
+    }
+    .register{
+        font-size: 1.3rem;
+        color: #fff;
+        text-align: center;
+        margin: 25px 0 10px;
+    }
+    .register p a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+    }
+    .register p a:hover{
+        text-decoration: underline;
+    }
+    
+    input{
+        accent-color: rgb(58, 187, 238);
+    }
+    .forget a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600
+    }
+    .forget a:hover{
+        text-decoration: underline;
     }
 }
